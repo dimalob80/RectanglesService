@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RectanglesApp", "RectanglesApp\RectanglesApp.csproj", "{B6ACEBD4-8142-4B36-BB23-9ACE1FC9A665}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RectanglesApp.Tests", "RectanglesApp.Tests\RectanglesApp.Tests.csproj", "{B998CD92-9D6B-4CC0-B937-16FB62A15315}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6ACEBD4-8142-4B36-BB23-9ACE1FC9A665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6ACEBD4-8142-4B36-BB23-9ACE1FC9A665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6ACEBD4-8142-4B36-BB23-9ACE1FC9A665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6ACEBD4-8142-4B36-BB23-9ACE1FC9A665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B998CD92-9D6B-4CC0-B937-16FB62A15315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B998CD92-9D6B-4CC0-B937-16FB62A15315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B998CD92-9D6B-4CC0-B937-16FB62A15315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B998CD92-9D6B-4CC0-B937-16FB62A15315}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {968C2FC8-CC2E-408E-A3EB-19B05B3DD8BF}
+	EndGlobalSection
+EndGlobal
