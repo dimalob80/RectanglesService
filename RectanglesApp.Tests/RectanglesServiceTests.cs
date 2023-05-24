@@ -19,13 +19,34 @@ namespace RectanglesApp.Tests
         }
 
         [Test]
-        public void RectanglesService_GetRectanglesByCoordinates_ReturnRectangle()
+        public void RectanglesService_GetMatchingRectanglesAsync_1Match()
         {
             Init();
-            var rectangles = rectanglesService.GetRectanglesByCoordinatesAsync(3,3).Result;
-            Assert.AreEqual(3, rectangles[0].X);
-            Assert.AreEqual(3, rectangles[0].Y);
+            var rectangles = rectanglesService.GetMatchingRectanglesAsync(5, 5).Result;
+            Assert.AreEqual(1, rectangles[0].Id);
+            Assert.AreEqual(1, rectangles.Count);
             Dispose();
         }
+
+        [Test]
+        public void RectanglesService_GetMatchingRectanglesAsync_2Matches()
+        {
+            Init();
+            var rectangles = rectanglesService.GetMatchingRectanglesAsync(10, 10).Result;
+            Assert.AreEqual(1, rectangles[0].Id);
+            Assert.AreEqual(2, rectangles[1].Id);
+            Assert.AreEqual(2, rectangles.Count);
+            Dispose();
+        }
+        [Test]
+        public void RectanglesService_GetMatchingRectanglesAsync_NoMatches()
+        {
+            Init();
+            var rectangles = rectanglesService.GetMatchingRectanglesAsync(20, 20).Result;
+            Assert.AreEqual(0, rectangles.Count);
+            Dispose();
+        }
+
+
     }
 }

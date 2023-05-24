@@ -8,7 +8,7 @@ namespace RectanglesApp.Services;
 public interface IRegtanglesService
 {
     Task<List<RectangleDTO>> GetRectanglesAsync();
-    Task<List<RectangleDTO>> GetRectanglesByCoordinatesAsync(int x, int y);
+    Task<List<RectangleDTO>> GetMatchingRectanglesAsync(int x, int y);
 }
 
 public class RegtanglesService : IRegtanglesService
@@ -32,12 +32,15 @@ public class RegtanglesService : IRegtanglesService
         var dtos = _mapper.Map<List<RectangleDTO>>(rectangles);
         return dtos;
     }
-    public async Task<List<RectangleDTO>> GetRectanglesByCoordinatesAsync(int x, int y)
+
+    public async Task<List<RectangleDTO>> GetMatchingRectanglesAsync(int x, int y)
     {
         return await _dbContext.Rectangles
-            .Where(r=>r.StartX == x && r.StartY == y)
+            .Where(r => r.StartX <= x && x <= (r.StartX + r.Length)
+                     && r.StartY <= y && x <= (r.StartY + r.Width))
             .Include(r => r.Color)
             .Select(r => _mapper.Map<RectangleDTO>(r))
             .ToListAsync();
+
     }
 }

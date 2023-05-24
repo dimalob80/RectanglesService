@@ -28,9 +28,9 @@ namespace RectanglesApp.Controllers
 
         // GET api/<RectangularsController>/5/6
         [HttpGet("{x}/{y}")]
-        public async Task<ActionResult<RectangleDTO>> GetRectaglesByParams(int x, int y)
+        public async Task<ActionResult<RectangleDTO>> GetMatchingRectagles(int x, int y)
         {
-            var result = await _regtanglesService.GetRectanglesByCoordinatesAsync(x,y);
+            var result = await _regtanglesService.GetMatchingRectanglesAsync(x,y);
 
             if (result?.Count>0)
             {

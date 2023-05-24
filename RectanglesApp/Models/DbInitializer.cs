@@ -33,8 +33,8 @@ public class DbInitializer:IDbInitializer
                 {
                     StartX = i * 2,
                     StartY = i * 2,
-                    Length = random.Next(1, 50),
-                    Width = random.Next(1, 50),
+                    Length = 10,
+                    Width = 10,
                     ColorId = random.Next(1, 4),
                 });
             }

@@ -30,8 +30,8 @@ public abstract class BaseTestInit:IDisposable
         var testRectangles = new []
             {
                 new Rectangle{Id =1, StartX = 1, StartY=1, Length=10, Width=10, ColorId=1 },
-                new Rectangle{Id =2, StartX = 2, StartY=2, Length=20, Width=20, ColorId=2 },
-                new Rectangle{Id =3, StartX = 3, StartY=3, Length=30, Width=30, ColorId=3 }
+                new Rectangle{Id =2, StartX = 9, StartY=9, Length=10, Width=10, ColorId=2 },
+                new Rectangle{Id =3, StartX = 30, StartY=30, Length=10, Width=10, ColorId=3 }
             };
 
         dbContext.Rectangles.AddRange(testRectangles);
